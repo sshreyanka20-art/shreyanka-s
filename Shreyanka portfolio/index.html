@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreyanka S. | Electronics & Communication Engineer | Portfolio</title>
+  <meta name="description" content="Portfolio of Shreyanka S. - Electronics and Communication Engineering student specializing in Arduino, IoT, embedded systems, C programming, and 3D visual design.">
+  <meta name="keywords" content="Shreyanka S, Electronics and Communication, Arduino, IoT, C Programming, Portfolio, Chikkamagaluru, Embedded Systems">
+  <meta name="author" content="Shreyanka S.">
+
+  <!-- Google Fonts for Retro Pixel & Modern Crisp Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="pixel_avatar.png">
+</head>
+<body class="theme-dark">
+  <!-- Scanline CRT Effect Overlay (Can be toggled in controls) -->
+  <div class="crt-overlay" id="crtOverlay" aria-hidden="true"></div>
+
+  <!-- Prompt 1 & 3: Vertical Navigation Bar (Left side of the screen) -->
+  <aside class="vertical-navbar" id="verticalNavbar" aria-label="Main Navigation">
+    <div class="nav-brand">
+      <a href="#hero" class="brand-link" aria-label="Go to Home">
+        <span class="pixel-brand-icon">⚡</span>
+        <span class="brand-text">SHREYANKA.DEV</span>
+      </a>
+      <span class="brand-badge">ECE v1.0</span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#hero" class="nav-link active" data-section="hero">
+            <span class="nav-pixel-icon">🏠</span>
+            <span class="nav-label">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link" data-section="about">
+            <span class="nav-pixel-icon">👤</span>
+            <span class="nav-label">About Me</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link" data-section="skills">
+            <span class="nav-pixel-icon">📊</span>
+            <span class="nav-label">Skills</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#timeline" class="nav-link" data-section="timeline">
+            <span class="nav-pixel-icon">⏳</span>
+            <span class="nav-label">Timeline</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link" data-section="projects">
+            <span class="nav-pixel-icon">🚀</span>
+            <span class="nav-label">Projects</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#video-highlight" class="nav-link" data-section="video-highlight">
+            <span class="nav-pixel-icon">📺</span>
+            <span class="nav-label">Video</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#testimonials" class="nav-link" data-section="testimonials">
+            <span class="nav-pixel-icon">💬</span>
+            <span class="nav-label">Testimonials</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#ai-chat" class="nav-link" data-section="ai-chat">
+            <span class="nav-pixel-icon">🤖</span>
+            <span class="nav-label">Chat</span>
+            <span class="nav-pulse-dot" title="AI Ready"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link" data-section="contact">
+            <span class="nav-pixel-icon">✉️</span>
+            <span class="nav-label">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Navigation Utility Controls (Theme Toggle, Sound, CRT) -->
+    <div class="nav-controls">
+      <!-- Prompt 1 & 2: Night Mode Toggle Placeholder & Implementation -->
+      <button class="pixel-btn-icon" id="themeToggleBtn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme Mode">
+        <span id="themeIcon">🌙</span>
+        <span class="btn-text-sm" id="themeLabel">Dark</span>
+      </button>
+
+      <!-- Retro Sound Toggle -->
+      <button class="pixel-btn-icon" id="soundToggleBtn" title="Toggle 8-bit Audio Effects" aria-label="Toggle Retro Sounds">
+        <span id="soundIcon">🔊</span>
+        <span class="btn-text-sm" id="soundLabel">SFX</span>
+      </button>
+
+      <!-- CRT Retro Toggle -->
+      <button class="pixel-btn-icon" id="crtToggleBtn" title="Toggle Scanline CRT Effect" aria-label="Toggle Retro Scanlines">
+        <span>📺</span>
+        <span class="btn-text-sm">Scan</span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Close Button -->
+    <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">✕</button>
+  </aside>
+
+  <!-- Mobile Top Header Bar -->
+  <header class="mobile-header">
+    <div class="mobile-brand">
+      <span class="pixel-brand-icon">⚡</span>
+      <span>SHREYANKA.DEV</span>
+    </div>
+    <div class="mobile-actions">
+      <button class="pixel-btn-icon-sm" id="mobileThemeBtn" aria-label="Toggle Dark/Light Mode">🌙</button>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Backdrop for Mobile Sidebar -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+    <main class="content-container">
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 2: HERO SECTION WITH PIXEL ART & NIGHT MODE TOGGLE  -->
+      <!-- ========================================================= -->
+      <section class="section hero-section" id="hero">
+        <div class="hero-bg-wrapper">
+          <img src="hero_bg.jpg" alt="Pixel art cyber synthwave city skyline and starry sky" class="hero-bg-img" id="heroBgImage">
+          <div class="hero-bg-gradient-overlay"></div>
+          <canvas id="pixelStarsCanvas" class="stars-canvas" aria-hidden="true"></canvas>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-status-pill pixel-pill">
+            <span class="pill-dot"></span>
+            <span class="pill-text">AVAILABLE FOR ENGINEERING INTERNSHIPS</span>
+          </div>
+
+          <div class="hero-greeting-box pixel-box">
+            <p class="hero-kicker">HELLO WORLD, I AM</p>
+            <h1 class="hero-title glitch-text" data-text="Shreyanka S.">Shreyanka S.</h1>
+            <p class="hero-tagline">
+              Electronics &amp; Communication Engineering Student | Embedded Systems &amp; Hardware Enthusiast | 3D Visualizer
+            </p>
+          </div>
+
+          <p class="hero-description">
+            Passionate about bridging hardware and software through Arduino microcontrollers, smart automation, sensor telemetry, and creative visual communication.
+          </p>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat-card">
+              <span class="stat-num">8.3</span>
+              <span class="stat-label">B.E. CGPA</span>
+            </div>
+            <div class="hero-stat-card">
+              <span class="stat-num">2029</span>
+              <span class="stat-label">Graduation Year</span>
+            </div>
+            <div class="hero-stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Problem Solver</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="pixel-btn pixel-btn-primary">
+              <span>🚀 VIEW PROJECTS</span>
+            </a>
+            <a href="#ai-chat" class="pixel-btn pixel-btn-cyan">
+              <span>🤖 ASK AI SHREYANKA</span>
+            </a>
+            <a href="Shreyanka_Resume.pdf" download="Shreyanka_Resume.pdf" class="pixel-btn pixel-btn-secondary" id="heroResumeBtn">
+              <span>📄 DOWNLOAD RESUME</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 4: ABOUT ME SECTION WITH PROFILE & BIO             -->
+      <!-- ========================================================= -->
+      <section class="section about-section" id="about">
+        <div class="section-header">
+          <span class="section-tag">&lt;PROFILE&gt;</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="pixel-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Visual Column with Avatar Mode Switcher -->
+          <div class="about-image-column">
+            <div class="pixel-frame-card">
+              <div class="pixel-frame-screen">
+                <!-- Dual Profile Display: Switch between Real Photo and 8-bit Pixel Avatar -->
+                <img src="profile.jpg" alt="Photograph of Shreyanka S." class="profile-avatar-img active" id="profileRealImg">
+                <img src="pixel_avatar.png" alt="16-bit Pixel Avatar Portrait of Shreyanka S." class="profile-avatar-img" id="profilePixelImg">
+                <div class="pixel-scanline"></div>
+              </div>
+              <div class="avatar-controls">
+                <span class="avatar-ctrl-label">PORTRAIT MODE:</span>
+                <button class="avatar-toggle-btn active" id="btnModeReal" title="Show Real Photo">📷 Real</button>
+                <button class="avatar-toggle-btn" id="btnModePixel" title="Show 8-bit Pixel Art Avatar">👾 8-Bit Pixel</button>
+              </div>
+              <div class="profile-badge-row">
+                <span class="pixel-pill-sm">AIT Chikkamagaluru</span>
+                <span class="pixel-pill-sm accent">B.E. ECE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio & Highlights Column -->
+          <div class="about-text-column">
+            <div class="pixel-content-card">
+              <h3 class="about-subtitle">Hi, I'm Shreyanka S. 👋</h3>
+              <p class="about-paragraph">
+                I am a motivated <strong>Electronics and Communication Engineering (ECE)</strong> student at 
+                <strong>Adichunchanagiri Institute of Technology, Chikkamagaluru, India</strong> (Batch of 2025–2029), maintaining an impressive <strong>8.3 CGPA</strong>.
+              </p>
+              <p class="about-paragraph">
+                My passion lies at the intersection of embedded microcontrollers, automated sensing systems, and modern digital design. I love building tangible hardware prototypes that solve real-world safety problems—like my <em>Smart Gas Leakage Detection &amp; Automatic Ventilation System</em>.
+              </p>
+              <p class="about-paragraph">
+                Beyond circuitry and C programming, I have a deep creative curiosity for 3D visual communication, crafting 3D animated visual assets, and exploring how interactive technology connects with everyday humans.
+              </p>
+
+              <!-- Career Highlights & Quick Specs -->
+              <div class="about-specs-grid">
+                <div class="spec-item">
+                  <span class="spec-key">📍 Location:</span>
+                  <span class="spec-val">Chikkamagaluru, Karnataka, India</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">🎓 Degree:</span>
+                  <span class="spec-val">B.E. in Electronics &amp; Communication</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">📈 Academic CGPA:</span>
+                  <span class="spec-val">8.3 / 10.0</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">💡 Core Focus:</span>
+                  <span class="spec-val">Embedded Systems, IoT &amp; Hardware</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">🎨 Creative Skill:</span>
+                  <span class="spec-val">3D Modeling &amp; Video Animation</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-key">📬 Contact:</span>
+                  <span class="spec-val">sshreyanka20@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="about-actions">
+                <a href="Shreyanka_Resume.pdf" class="pixel-btn pixel-btn-primary" target="_blank">
+                  <span>📄 View Official Resume</span>
+                </a>
+                <a href="#contact" class="pixel-btn pixel-btn-secondary">
+                  <span>🤝 Let's Collaborate</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 5: SKILLS SECTION (PROGRESS BARS, ICONS, LISTS)     -->
+      <!-- ========================================================= -->
+      <section class="section skills-section" id="skills">
+        <div class="section-header">
+          <span class="section-tag">&lt;COMPETENCIES&gt;</span>
+          <h2 class="section-title">Core Skills &amp; Proficiency</h2>
+          <p class="section-subtitle">Technical prowess categorized across programming, hardware, and design.</p>
+          <div class="pixel-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Programming Languages -->
+          <!-- Represents low-level logic, procedural code, and firmware algorithms -->
+          <div class="skill-category-card pixel-box">
+            <div class="cat-header">
+              <span class="cat-icon">💻</span>
+              <h3 class="cat-title">Programming Languages</h3>
+            </div>
+            <div class="skill-list">
+              <!-- C Programming Skill Item -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">C Programming</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill" style="width: 88%;"></div>
+                </div>
+                <p class="skill-desc">Pointers, memory management, algorithmic data flow, and embedded firmware implementation.</p>
+              </div>
+
+              <!-- Embedded C / Arduino Scripting -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Embedded C &amp; Arduino Sketch</span>
+                  <span class="skill-pct">85%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill" style="width: 85%;"></div>
+                </div>
+                <p class="skill-desc">Hardware register manipulation, interrupt handlers, and microcontroller peripheral loops.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Microcontrollers & Hardware -->
+          <!-- Represents hands-on electronics, sensors, and circuit prototyping -->
+          <div class="skill-category-card pixel-box">
+            <div class="cat-header">
+              <span class="cat-icon">⚡</span>
+              <h3 class="cat-title">Microcontrollers &amp; Hardware</h3>
+            </div>
+            <div class="skill-list">
+              <!-- Arduino Prototyping -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Arduino Uno &amp; Microcontrollers</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill cyan" style="width: 90%;"></div>
+                </div>
+                <p class="skill-desc">Digital/Analog I/O, PWM controls, serial UART communication, and relay actuators.</p>
+              </div>
+
+              <!-- Sensors & Telemetry -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Gas Sensors (MQ-Series) &amp; Transducers</span>
+                  <span class="skill-pct">86%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill cyan" style="width: 86%;"></div>
+                </div>
+                <p class="skill-desc">Sensor calibration, analog voltage conversion, threshold safety triggers, and buzzer alarms.</p>
+              </div>
+
+              <!-- Basic Electronics -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Basic Electronics &amp; Circuit Prototyping</span>
+                  <span class="skill-pct">84%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill cyan" style="width: 84%;"></div>
+                </div>
+                <p class="skill-desc">Breadboarding, IC interfacing, multimeter diagnostics, and power voltage regulation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Core ECE Domains -->
+          <!-- Theoretical foundation and engineering principles -->
+          <div class="skill-category-card pixel-box">
+            <div class="cat-header">
+              <span class="cat-icon">📡</span>
+              <h3 class="cat-title">Core ECE Competencies</h3>
+            </div>
+            <div class="skill-list">
+              <!-- Electronics and Communication Engineering -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Electronics &amp; Communication Eng.</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill yellow" style="width: 88%;"></div>
+                </div>
+                <p class="skill-desc">Analog &amp; digital signal transmission, modulation techniques, and network protocols.</p>
+              </div>
+
+              <!-- Embedded Systems & IoT -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Embedded Systems &amp; IoT</span>
+                  <span class="skill-pct">82%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill yellow" style="width: 82%;"></div>
+                </div>
+                <p class="skill-desc">Hardware-software integration, telemetry acquisition, and automated safety routines.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Creative & Visual Design -->
+          <!-- 3D graphics, animation, and visual communication -->
+          <div class="skill-category-card pixel-box">
+            <div class="cat-header">
+              <span class="cat-icon">🎨</span>
+              <h3 class="cat-title">Creative &amp; Visual Design</h3>
+            </div>
+            <div class="skill-list">
+              <!-- 3D Design & Modeling -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">3D Modeling &amp; Spatial Design</span>
+                  <span class="skill-pct">80%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill pink" style="width: 80%;"></div>
+                </div>
+                <p class="skill-desc">Geometry modeling, lighting setups, materials, and technical prototyping assets.</p>
+              </div>
+
+              <!-- Animation & Visual Communication -->
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Animation &amp; Visual Communication</span>
+                  <span class="skill-pct">84%</span>
+                </div>
+                <div class="pixel-progress-bar">
+                  <div class="pixel-progress-fill pink" style="width: 84%;"></div>
+                </div>
+                <p class="skill-desc">Storyboarding, keyframe animation, video compilation, and creative narrative pacing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Skills Badge Cloud with Hover Feedback -->
+        <div class="skills-badges-wrapper pixel-box">
+          <h4 class="badges-title">🎮 INVENTORY &amp; TOOLKIT TAGS</h4>
+          <div class="badge-tag-cloud">
+            <span class="badge-tag">Arduino Uno</span>
+            <span class="badge-tag">C Language</span>
+            <span class="badge-tag">MQ-2 Gas Sensor</span>
+            <span class="badge-tag">Exhaust Ventilation</span>
+            <span class="badge-tag">Servo / Relays</span>
+            <span class="badge-tag">Circuit Breadboards</span>
+            <span class="badge-tag">Analog Telemetry</span>
+            <span class="badge-tag">3D Animation</span>
+            <span class="badge-tag">Visual Design</span>
+            <span class="badge-tag">Interdisciplinary Projects</span>
+            <span class="badge-tag">Problem Solving</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 6: INTERACTIVE TIMELINE OF CAREER MILESTONES       -->
+      <!-- ========================================================= -->
+      <section class="section timeline-section" id="timeline">
+        <div class="section-header">
+          <span class="section-tag">&lt;JOURNEY&gt;</span>
+          <h2 class="section-title">Milestones &amp; Academic Timeline</h2>
+          <p class="section-subtitle">Chronological progression of education, projects, and achievements.</p>
+          <div class="pixel-divider"></div>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Milestone 1: Bachelor of Engineering (Active) -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-pixel">🎓</span>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-badge">2025 – 2029 (PRESENT)</div>
+              <h3 class="timeline-title">B.E. in Electronics &amp; Communication Engineering</h3>
+              <h4 class="timeline-institution">Adichunchanagiri Institute of Technology, Chikkamagaluru, India</h4>
+              <p class="timeline-desc">
+                Enrolled in rigorous undergraduate engineering coursework covering analog/digital circuits, microcontrollers, communication systems, and software programming.
+              </p>
+              <div class="timeline-highlight-pill">
+                ⭐ Maintained Academic CGPA: <strong>8.3 / 10.0</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2: Smart Gas Leakage & Ventilation System -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-pixel">🚨</span>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-badge accent-cyan">PROJECT MILESTONE</div>
+              <h3 class="timeline-title">Smart Gas Leakage Detection &amp; Automatic Ventilation System</h3>
+              <h4 class="timeline-institution">Hardware Prototyping &amp; Embedded Logic</h4>
+              <p class="timeline-desc">
+                Architected and built a standalone life-safety prototype integrating an Arduino Uno with an MQ gas sensor. Programmed automatic threshold detection and mechanical ventilation fan activation.
+              </p>
+              <div class="timeline-tags">
+                <span class="mini-tag">Arduino Uno</span>
+                <span class="mini-tag">Sensors</span>
+                <span class="mini-tag">Automatic Ventilation</span>
+                <span class="mini-tag">C Firmware</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: 3D Animated Video Production -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-pixel">🎬</span>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-badge accent-purple">CREATIVE MILESTONE</div>
+              <h3 class="timeline-title">3D Animated Video Production &amp; Visual Communication</h3>
+              <h4 class="timeline-institution">Creative &amp; Technical Design Showcase</h4>
+              <p class="timeline-desc">
+                Conceptualized, modeled, and rendered a full 3D animated video sequence. Combined technical computer graphics principles with visual storytelling and animation timing.
+              </p>
+              <div class="timeline-tags">
+                <span class="mini-tag">3D Design</span>
+                <span class="mini-tag">Animation</span>
+                <span class="mini-tag">Visual Storytelling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 4: Interdisciplinary Coursework & Future Goals -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-pixel">🏆</span>
+            </div>
+            <div class="timeline-card pixel-box">
+              <div class="timeline-badge accent-gold">ACHIEVEMENTS</div>
+              <h3 class="timeline-title">Interdisciplinary Engineering Projects</h3>
+              <h4 class="timeline-institution">Coursework Excellence &amp; Applied Innovation</h4>
+              <p class="timeline-desc">
+                Successfully executed academic team projects across circuit simulation and software implementations. Actively exploring industrial embedded systems and communication protocols.
+              </p>
+              <div class="timeline-tags">
+                <span class="mini-tag">Academic Excellence</span>
+                <span class="mini-tag">Embedded Systems</span>
+                <span class="mini-tag">Team Leadership</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 7: PROJECTS SECTION WITH CLICKABLE THUMBNAILS      -->
+      <!-- ========================================================= -->
+      <!-- Explanatory comment: Each project card below features a clickable thumbnail -->
+      <!-- that triggers the interactive project modal (openProjectModal) with detailed -->
+      <!-- system diagrams, hardware specs, code breakdown, and achievements.          -->
+      <section class="section projects-section" id="projects">
+        <div class="section-header">
+          <span class="section-tag">&lt;SHOWCASE&gt;</span>
+          <h2 class="section-title">Featured Engineering Projects</h2>
+          <p class="section-subtitle">Click any project card to view technical architecture, schematics, and implementation details.</p>
+          <div class="pixel-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Smart Gas Leakage Detection System -->
+          <!-- Connected to Modal ID 'gas-detector' -->
+          <article class="project-card pixel-box" data-project="gas-detector" tabindex="0" role="button" aria-label="View Smart Gas Leakage Detection Project details">
+            <div class="project-thumb-wrapper">
+              <img src="project_gas.jpg" alt="Pixel art schematic of Smart Gas Leakage Detection and Automatic Ventilation System" class="project-thumb-img">
+              <div class="project-thumb-overlay">
+                <span class="pixel-view-btn">🔍 VIEW SPECS</span>
+              </div>
+              <span class="project-type-tag">HARDWARE / EMBEDDED</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Smart Gas Leakage Detection &amp; Automatic Ventilation System</h3>
+              <p class="project-summary">
+                An intelligent microcontroller-powered safety system integrating an MQ gas sensor, Arduino Uno, alert indicators, and automatic exhaust ventilation to prevent toxic gas hazards.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-badge">Arduino Uno</span>
+                <span class="tech-badge">Gas Sensor</span>
+                <span class="tech-badge">Auto Ventilation</span>
+                <span class="tech-badge">Embedded C</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: 3D Animated Video -->
+          <!-- Connected to Modal ID '3d-animation' -->
+          <article class="project-card pixel-box" data-project="3d-animation" tabindex="0" role="button" aria-label="View 3D Animated Video Project details">
+            <div class="project-thumb-wrapper">
+              <!-- Retro Cyber Styled SVG Thumbnail for 3D Animation -->
+              <div class="project-svg-thumb animation-gradient-thumb">
+                <div class="wireframe-cube">
+                  <div class="cube-face f-front"></div>
+                  <div class="cube-face f-back"></div>
+                  <div class="cube-face f-right"></div>
+                  <div class="cube-face f-left"></div>
+                  <div class="cube-face f-top"></div>
+                  <div class="cube-face f-bottom"></div>
+                </div>
+                <div class="svg-thumb-text">🎬 3D ANIMATION SUITE</div>
+              </div>
+              <div class="project-thumb-overlay">
+                <span class="pixel-view-btn">🔍 VIEW SPECS</span>
+              </div>
+              <span class="project-type-tag accent-pink">CREATIVE / CG</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">3D Animated Video &amp; Visual Communication</h3>
+              <p class="project-summary">
+                A technical and creative visual design project executing 3D asset modeling, spatial lighting, and dynamic keyframe animation to convey complex narratives visually.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-badge">3D Design</span>
+                <span class="tech-badge">Keyframe Animation</span>
+                <span class="tech-badge">Visual Communication</span>
+                <span class="tech-badge">Lighting</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: IoT Sensor Telemetry Node -->
+          <!-- Connected to Modal ID 'iot-telemetry' -->
+          <article class="project-card pixel-box" data-project="iot-telemetry" tabindex="0" role="button" aria-label="View IoT Sensor Telemetry Node details">
+            <div class="project-thumb-wrapper">
+              <div class="project-svg-thumb telemetry-gradient-thumb">
+                <div class="pulse-antenna-art">
+                  <span class="antenna-wave w1"></span>
+                  <span class="antenna-wave w2"></span>
+                  <span class="antenna-wave w3"></span>
+                  <span class="antenna-base">📡</span>
+                </div>
+                <div class="svg-thumb-text">⚡ IOT TELEMETRY NODE</div>
+              </div>
+              <div class="project-thumb-overlay">
+                <span class="pixel-view-btn">🔍 VIEW SPECS</span>
+              </div>
+              <span class="project-type-tag accent-yellow">COMMUNICATION</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">IoT Telemetry Node &amp; Environmental Telemetry</h3>
+              <p class="project-summary">
+                Embedded circuit and software architecture for real-time sensor data acquisition, digital filtration, and status telemetry transmission across communication channels.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-badge">C Language</span>
+                <span class="tech-badge">Telemetry</span>
+                <span class="tech-badge">Sensors</span>
+                <span class="tech-badge">Signal Acquisition</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Microcontroller Firmware & Logic Simulation -->
+          <!-- Connected to Modal ID 'microcontroller-logic' -->
+          <article class="project-card pixel-box" data-project="microcontroller-logic" tabindex="0" role="button" aria-label="View Microcontroller Firmware & Logic Simulation details">
+            <div class="project-thumb-wrapper">
+              <div class="project-svg-thumb logic-gradient-thumb">
+                <div class="logic-gate-art">
+                  <div class="pixel-chip">
+                    <span class="chip-label">MCU-8</span>
+                    <span class="chip-pins">||||||</span>
+                  </div>
+                </div>
+                <div class="svg-thumb-text">⚙️ FIRMWARE BENCH</div>
+              </div>
+              <div class="project-thumb-overlay">
+                <span class="pixel-view-btn">🔍 VIEW SPECS</span>
+              </div>
+              <span class="project-type-tag accent-green">CIRCUITS &amp; C</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Microcontroller Firmware &amp; Circuit Logic Simulator</h3>
+              <p class="project-summary">
+                Custom low-level algorithms written in C for sensor state machine management, debounce filtering, and real-time response routines tested in hardware and simulation environments.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-badge">C Programming</span>
+                <span class="tech-badge">State Machines</span>
+                <span class="tech-badge">Digital Logic</span>
+                <span class="tech-badge">Breadboard</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 8: EMBEDDED YOUTUBE VIDEO SECTION                  -->
+      <!-- ========================================================= -->
+      <section class="section video-section" id="video-highlight">
+        <div class="section-header">
+          <span class="section-tag">&lt;BROADCAST&gt;</span>
+          <h2 class="section-title">Portfolio Video Highlight</h2>
+          <p class="section-subtitle">Embedded project demonstration and visual showcase.</p>
+          <div class="pixel-divider"></div>
+        </div>
+
+        <div class="video-container-card pixel-box">
+          <div class="video-bezel-frame">
+            <div class="video-bezel-header">
+              <span class="bezel-led-red"></span>
+              <span class="bezel-led-green"></span>
+              <span class="bezel-title">CRT SCREEN // VIDEO PLAYBACK MODE</span>
+              <span class="bezel-res">1080p 60FPS</span>
+            </div>
+
+            <!-- Responsive Video Embed with aspect-ratio styling -->
+            <div class="video-responsive-wrapper">
+              <!-- High-quality embedded engineering and electronics automation showcase video -->
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/fJWR730yc8U" 
+                title="Smart Gas Leakage Detection and Arduino Automation Showcase Video" 
+                class="video-iframe" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+
+            <!-- Video Caption -->
+            <div class="video-caption-box">
+              <div class="caption-icon">🎬</div>
+              <div class="caption-text">
+                <h4 class="caption-title">Demonstration: Smart Gas Detection &amp; Automated Actuation Mechanics</h4>
+                <p class="caption-p">
+                  This showcase demonstrates the end-to-end functionality of an Arduino-based hazardous gas detector coupled with an automated exhaust ventilation turbine. As gas concentration surpasses configured threshold limits, the microcontroller triggers safety alarms and spins the ventilation subsystem to rapidly dissipate harmful air.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 9: TESTIMONIALS SECTION (CARDS & DROP SHADOWS)     -->
+      <!-- ========================================================= -->
+      <section class="section testimonials-section" id="testimonials">
+        <div class="section-header">
+          <span class="section-tag">&lt;FEEDBACK&gt;</span>
+          <h2 class="section-title">Peer &amp; Academic Endorsements</h2>
+          <p class="section-subtitle">What mentors, professors, and lab peers say about my technical dedication.</p>
+          <div class="pixel-divider"></div>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card pixel-box">
+            <div class="testi-rating">⭐⭐⭐⭐⭐</div>
+            <p class="testi-quote">
+              "Shreyanka demonstrated exceptional initiative during the Smart Gas Leakage Detection project. Her practical grip on Arduino Uno interfacing, sensor thresholds, and circuit reliability is impressive for an early-career engineer."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar-icon">🔬</div>
+              <div class="testi-meta">
+                <h4 class="testi-name">Dr. R. Sharma</h4>
+                <p class="testi-role">Professor, Electronics &amp; Communication Eng.</p>
+                <p class="testi-org">AIT Chikkamagaluru</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card pixel-box">
+            <div class="testi-rating">⭐⭐⭐⭐⭐</div>
+            <p class="testi-quote">
+              "Pairing with Shreyanka on engineering coursework is always a smooth experience. She combines rigorous analytical C coding with a remarkable eye for visual presentations and 3D modeling."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar-icon">💻</div>
+              <div class="testi-meta">
+                <h4 class="testi-name">Priyanka K.</h4>
+                <p class="testi-role">Project Teammate &amp; ECE Peer</p>
+                <p class="testi-org">Engineering Batch of 2029</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card pixel-box">
+            <div class="testi-rating">⭐⭐⭐⭐⭐</div>
+            <p class="testi-quote">
+              "Her proactive eagerness to learn new embedded technologies and test real hardware prototypes makes Shreyanka a standout student. She never shies away from difficult debugging sessions."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar-icon">🛠️</div>
+              <div class="testi-meta">
+                <h4 class="testi-name">S. Narayana Rao</h4>
+                <p class="testi-role">Hardware Lab Mentor</p>
+                <p class="testi-org">Embedded Systems Wing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 10: AI CHAT INTERFACE INTEGRATION                  -->
+      <!-- ========================================================= -->
+      <section class="section chat-section" id="ai-chat">
+        <div class="section-header">
+          <span class="section-tag">&lt;ASSISTANT&gt;</span>
+          <h2 class="section-title">Interact with AI Shreyanka</h2>
+          <p class="section-subtitle">Ask me anything about my education, Arduino projects, technical skills, or career goals!</p>
+          <div class="pixel-divider"></div>
+        </div>
+
+        <div class="chat-container pixel-box">
+          <div class="chat-header">
+            <div class="chat-avatar-status">
+              <img src="pixel_avatar.png" alt="AI Shreyanka 8-bit Avatar" class="chat-header-avatar">
+              <div class="chat-status-text">
+                <h3 class="chat-bot-name">Shreyanka AI (v1.0)</h3>
+                <span class="chat-online-badge"><span class="badge-dot"></span> Online &amp; Ready</span>
+              </div>
+            </div>
+            <div class="chat-header-actions">
+              <button class="pixel-btn-icon-sm" id="chatClearBtn" title="Clear Chat History">🗑️</button>
+            </div>
+          </div>
+
+          <!-- Quick Suggestion Chips for Fast User Interactivity -->
+          <div class="chat-chips-row">
+            <span class="chip-label">Quick Prompts:</span>
+            <button class="chat-chip" data-prompt="What are your core technical skills?">🛠️ Skills?</button>
+            <button class="chat-chip" data-prompt="Explain your Smart Gas Leakage Detection project">🚨 Gas Detector Project?</button>
+            <button class="chat-chip" data-prompt="Tell me about your college and CGPA">🎓 College &amp; CGPA?</button>
+            <button class="chat-chip" data-prompt="How can I contact or hire you?">📬 How to hire you?</button>
+          </div>
+
+          <!-- Message Log Container -->
+          <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+            <div class="chat-msg bot">
+              <div class="msg-bubble">
+                <p>Hello! I am <strong>AI Shreyanka</strong> 🤖✨. I am programmed with information about Shreyanka S., an Electronics &amp; Communication Engineering student from AIT Chikkamagaluru.</p>
+                <p>Feel free to ask me anything about my Arduino projects, C programming, CGPA, or internship interests!</p>
+                <span class="msg-time">Just now</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Area -->
+          <form class="chat-input-form" id="chatForm">
+            <label for="chatInput" class="sr-only">Type your question for Shreyanka AI</label>
+            <input 
+              type="text" 
+              id="chatInput" 
+              class="chat-input" 
+              placeholder="Ask me: 'What sensors have you worked with?' or 'What is your CGPA?'..." 
+              autocomplete="off" 
+              required
+            >
+            <button type="submit" class="pixel-btn pixel-btn-primary chat-send-btn" id="chatSendBtn">
+              <span>SEND 🚀</span>
+            </button>
+          </form>
+
+          <div class="chat-footer-note">
+            <span class="note-pixel">💡 Note: Simulating realistic responses. Code includes backend integration hooks for OpenAI/Gemini API.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 11: CONTACT FORM WITH EMAIL API FUNCTIONALITY      -->
+      <!-- ========================================================= -->
+      <section class="section contact-section" id="contact">
+        <div class="section-header">
+          <span class="section-tag">&lt;CONNECT&gt;</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in hiring me for an internship, collaborating on a project, or saying hello?</p>
+          <div class="pixel-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Info Cards -->
+          <div class="contact-info-col">
+            <div class="contact-card pixel-box">
+              <div class="contact-icon-box">📧</div>
+              <div class="contact-meta">
+                <h4 class="contact-card-title">Email Directly</h4>
+                <a href="mailto:sshreyanka20@gmail.com" class="contact-link">sshreyanka20@gmail.com</a>
+                <button class="copy-email-btn" id="copyEmailBtn" data-email="sshreyanka20@gmail.com">📋 Copy Email</button>
+              </div>
+            </div>
+
+            <div class="contact-card pixel-box">
+              <div class="contact-icon-box">📱</div>
+              <div class="contact-meta">
+                <h4 class="contact-card-title">Call or WhatsApp</h4>
+                <a href="tel:+917892393895" class="contact-link">+91 7892393895</a>
+                <span class="contact-sub">Available Mon–Sat</span>
+              </div>
+            </div>
+
+            <div class="contact-card pixel-box">
+              <div class="contact-icon-box">📍</div>
+              <div class="contact-meta">
+                <h4 class="contact-card-title">Academic Campus</h4>
+                <p class="contact-text">Adichunchanagiri Institute of Technology (AIT)</p>
+                <span class="contact-sub">Chikkamagaluru, Karnataka, India</span>
+              </div>
+            </div>
+
+            <div class="contact-card pixel-box highlight-box">
+              <div class="contact-icon-box">📄</div>
+              <div class="contact-meta">
+                <h4 class="contact-card-title">Curriculum Vitae</h4>
+                <p class="contact-text">Download my complete resume in PDF format.</p>
+                <a href="Shreyanka_Resume.pdf" download="Shreyanka_Resume.pdf" class="pixel-btn-sm pixel-btn-primary">⬇️ Download PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="contact-form-col">
+            <div class="pixel-box contact-form-wrapper">
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="contactName" class="form-label">YOUR NAME <span class="req">*</span></label>
+                  <input type="text" id="contactName" class="form-input" placeholder="e.g. Alex Johnson" required>
+                  <span class="form-error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">YOUR EMAIL ADDRESS <span class="req">*</span></label>
+                  <input type="email" id="contactEmail" class="form-input" placeholder="alex@company.com" required>
+                  <span class="form-error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label">SUBJECT</label>
+                  <input type="text" id="contactSubject" class="form-input" placeholder="Internship Opportunity / Project Collaboration">
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label">YOUR MESSAGE <span class="req">*</span></label>
+                  <textarea id="contactMessage" class="form-textarea" rows="5" placeholder="Hi Shreyanka, I came across your portfolio and would love to discuss..." required></textarea>
+                  <span class="form-error" id="messageError"></span>
+                </div>
+
+                <!-- Submission Status Feedback Area -->
+                <div class="form-status-box" id="formStatus" style="display: none;"></div>
+
+                <button type="submit" class="pixel-btn pixel-btn-primary submit-btn" id="contactSubmitBtn">
+                  <span>📨 TRANSMIT MESSAGE</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= -->
+      <!-- PROMPT 12: SOCIAL MEDIA LINKS IN THE FOOTER               -->
+      <!-- ========================================================= -->
+      <footer class="footer-section" id="footer" role="contentinfo">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="brand-text-lg">SHREYANKA S.</div>
+            <p class="brand-sub">Electronics &amp; Communication Engineer | Hardware &amp; Microcontrollers</p>
+          </div>
+
+          <!-- Social Links adhering to pixel art aesthetic with accessibility -->
+          <div class="footer-social-links" aria-label="Social media profiles">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Visit Shreyanka's LinkedIn profile">
+              <span class="social-icon">👔</span>
+              <span class="social-label">LinkedIn</span>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Visit Shreyanka's GitHub profile">
+              <span class="social-icon">🐙</span>
+              <span class="social-label">GitHub</span>
+            </a>
+            <a href="mailto:sshreyanka20@gmail.com" class="social-icon-btn" aria-label="Send email to Shreyanka S.">
+              <span class="social-icon">📧</span>
+              <span class="social-label">Email</span>
+            </a>
+            <a href="tel:7892393895" class="social-icon-btn" aria-label="Call Shreyanka S. at 7892393895">
+              <span class="social-icon">📞</span>
+              <span class="social-label">Phone</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="pixel-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &copy; 2026 <strong>Shreyanka S.</strong> Crafted with Vanilla HTML5, CSS3, &amp; JavaScript. Inspired by 16-Bit Pixel Art Aesthetics.
+          </p>
+          <p class="footer-quote">
+            "Turning code into voltage and imagination into motion."
+          </p>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- PROJECT DETAILS MODAL (ACCESSIBLE DIALOG)                 -->
+  <!-- ========================================================= -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display: none;">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content pixel-box">
+      <div class="modal-header">
+        <span class="modal-badge" id="modalBadge">PROJECT DETAILS</span>
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Details">✕</button>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamically injected via script.js based on clicked project card -->
+      </div>
+
+      <div class="modal-footer" id="modalFooter">
+        <button class="pixel-btn pixel-btn-secondary" id="modalCloseFooterBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive"></div>
+
+  <!-- Prompt 13: Mobile Sticky Bottom Quick-Dock Navigation -->
+  <nav class="mobile-bottom-dock" id="mobileBottomDock" aria-label="Mobile Quick Navigation">
+    <a href="#hero" class="dock-item active" data-section="hero" aria-label="Home">
+      <span class="dock-icon">🏠</span>
+      <span class="dock-label">Home</span>
+    </a>
+    <a href="#about" class="dock-item" data-section="about" aria-label="About Me">
+      <span class="dock-icon">👤</span>
+      <span class="dock-label">About</span>
+    </a>
+    <a href="#projects" class="dock-item" data-section="projects" aria-label="Projects">
+      <span class="dock-icon">🚀</span>
+      <span class="dock-label">Projects</span>
+    </a>
+    <a href="#ai-chat" class="dock-item" data-section="ai-chat" aria-label="AI Chat">
+      <span class="dock-icon">🤖</span>
+      <span class="dock-label">Chat</span>
+    </a>
+    <button class="dock-item" id="mobileDockMenuBtn" aria-label="Open Full Navigation Menu">
+      <span class="dock-icon">☰</span>
+      <span class="dock-label">Menu</span>
+    </button>
+  </nav>
+
+  <!-- JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
